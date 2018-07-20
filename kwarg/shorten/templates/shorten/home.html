@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+
+{%block content%}
+
+  
+<main>
+<div id="container">
+	<ion-icon name="paper-plane"></ion-icon>
+  <form action="." method="POST">{% csrf_token%}
+
+    <img src="https://bit.ly/2tlJLoz"><br>
+    <br>
+    {{form.as_p}}<br>
+    <input type="password"><br>
+    <input type="submit" value="Shorten"><br>
+
+    
+  </form>
+</div>
+<br><br>
+<br><br>
+
+</main>
+<div>
+
+	
+ {%block head%} <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">{%endblock head%}
+ <div align="center" class="fa-3x">
+ 	<i class="fab fa-github"></i>
+ 	</div>
+ 	<div style="font-size-adjust: 0.0;" align="center">
+ 		kwargs is a Url Shortening Service. An OpenSource Project<br>
+ 		
+ 		We do not keep any personal information. Your Privacy is our Priority<br>
+ 		
+
+</div>
+
+
+
+
+{%endblock content%}
+
+
+
+
+
+

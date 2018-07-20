@@ -1,0 +1,38 @@
+
+{% extends "base.html" %}
+
+
+{%block content%}
+
+<div class="container"  align="center">
+
+<p>Successfully made click below to check or just copy text</p>
+
+
+	 <a href=" {{object.get_short_url}}" class="alert-link btn btn-primary btn-link" >{{object.get_short_url}}</a>
+
+	 <p>
+	 </p>
+    <div class="alert alert-light" role="alert" class=" col-sm-6 col-sm-offset-3">
+
+ 
+ 
+ <div class="alert alert-success" role="alert">
+  Copy from here - {{object.get_short_url}}
+</div>
+ 
+</div>
+
+</div>
+
+
+	
+
+	
+
+
+
+
+
+{%endblock content%}
+
