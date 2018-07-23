@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>kwargs</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/assets/css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+  
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-1.12.2.min.js"
+  integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk="
+  crossorigin="anonymous"></script>
+  </head>
+  <body class="subpage">
+
+    <!-- Header -->
+      <header id="header">
+        <div class="logo"><a href="/">kwargs</a></div>
+        <a href="#menu">Menu</a>
+      </header>
+
+    <!-- Nav -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="about">About</a></li>
+          
+        </ul>
+      </nav>
+
+    <!-- One -->
+      <section id="One" class="wrapper style3">
+        <div class="inner">
+          <header class="align-center">
+            
+            
+          </header>
+        </div>
+      </section>
+
+    <!-- Two -->
+      <section id="two" class="wrapper style2">
+        <div class="inner">
+          <div class="box">
+            <div class="content">
+              <header class="align-center">
+
+                <h2>Genrated</h2>
+              </header>
+
+             {%block content%}
+
+
+
+<div  class="container" align="center">
+
+    
+  <br>
+                    <div class="3u 8u$(small)" >
+                      <input type="text" id="copy-me"  value="{{object.get_short_url}}" readonly> <br>
+                      <ul class="actions">
+                        <li> <a class="button special" id="MMM" data-clipboard-target="#copy-me" ><i class="fas fa-copy"></i></a></li>
+                      </ul>
+</button>
+
+                      
+
+<br><br>
+  <p><b>click here to check if its working or not</b></p><ul class="actions"><li><a href="{{object.get_short_url}}" class="button special" > <div class="fa-1x"><i class="fas fa-link fa-spin"> </i>
+  </div> </i></a></li></ul><br>
+<h4>{{object.clickevent.count}}</h4>
+{%if object.clickevent.count > 1%}
+<font><b><small>Clicks</small><b></font>
+{%else%}
+<b><font style="color:black;">Click</font></b>
+{%endif%}
+  <br>
+<br>
+  
+     <button id="fade" class="btn btn-outline-light">Click if not copied to clipboard</button><br><br></div>
+     <div id="div1" style="display: none;" >
+ <div class="alert alert-secondary" role="alert" >
+ <p>Copy - {{object.get_short_url}} <i class="fas fa-link"></i></p>
+</div>
+</div>
+
+
+
+<script>
+
+  $(function(){
+    new Clipboard('#MMM');
+});
+
+
+  $(document).ready(function(){
+    $("#fade").click(function(){
+        $("#div1").fadeToggle();
+        $("#div2").fadeToggle("slow");
+        $("#div3").fadeToggle(3000);
+    });
+});
+
+</script>
+
+{%endblock content%}
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Footer -->
+      <footer id="footer">
+        <div class="container">
+          
+        </div>
+        <div class="copyright">
+          &copy; OpenSource
+        </div>
+          <a href="https://github.com/danielhasan1"><div class="fa-2x"><i class="fab fa-github"></i></a></div> <i class="fas fa-at fa-1x"></i><font> dh813030@gmail.com</font> 
+      </footer>
+
+    <!-- Scripts -->
+      <script src="/static/assets/js/jquery.min.js"></script>
+      <script src="/static/assets/js/jquery.scrollex.min.js"></script>
+      <script src="/static/assets/js/skel.min.js"></script>
+      <script src="/static/assets/js/util.js"></script>
+      <script src="/static/assets/js/main.js"></script>
+
+  </body>
+</html>
+
